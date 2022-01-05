@@ -1,5 +1,6 @@
 package com.example.tasktimerapp.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -9,7 +10,7 @@ interface TaskDao {
     suspend fun addTask(task:Task)
 
     @Query("select * from task")
-    fun getTasks(): List<Task>
+    fun getTasks(): LiveData<List<Task>>
 
     @Update
     suspend fun updateTask(task: Task)
