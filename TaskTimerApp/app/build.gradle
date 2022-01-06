@@ -53,7 +53,6 @@ dependencies {
     kapt "androidx.room:room-compiler:2.4.0"
     //countdown
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
-
     //loadingProgressBar
     implementation 'com.kaishu.nspb:nsidedprogressbar:1.0.2'
 
