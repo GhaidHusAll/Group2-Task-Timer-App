@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TaskTimerApp.iml" filepath="$PROJECT_DIR$/.idea/modules/TaskTimerApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TaskTimerApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TaskTimerApp.app.iml" />
     </modules>
   </component>
