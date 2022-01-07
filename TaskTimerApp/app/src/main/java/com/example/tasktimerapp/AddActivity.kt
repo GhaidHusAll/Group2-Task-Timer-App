@@ -1,4 +1,4 @@
-package com.example.tasktimer
+package com.example.tasktimerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
