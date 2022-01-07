@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val PrograssFragment = com.example.tasktimer.fragments.PrograssFragment()
     private val AddTaskFragment = com.example.tasktimer.fragments.AddTaskFragment()
     lateinit var bottomNav : BottomNavigationView
-
+//ghassan
     private val taskViewModel by lazy { TaskViewModel(application) }
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var binding: ActivityMainBinding
