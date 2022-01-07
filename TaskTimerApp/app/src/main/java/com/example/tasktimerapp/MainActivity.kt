@@ -1,23 +1,20 @@
 package com.example.tasktimerapp
 
 import android.content.SharedPreferences
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import androidx.fragment.app.Fragment
 import com.example.tasktimerapp.ViewModel.TaskViewModel
 import com.example.tasktimerapp.databinding.ActivityMainBinding
-
-
-
-
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
 
-    private val HomeScreenFragment = com.example.tasktimer.fragments.HomeScreenFragment()
-    private val PrograssFragment = com.example.tasktimer.fragments.PrograssFragment()
-    private val AddTaskFragment = com.example.tasktimer.fragments.AddTaskFragment()
+    private val homeScreenFragment = com.example.tasktimerapp.fragments.HomeScreenFragment()
+    private val progressFragment = com.example.tasktimerapp.fragments.PrograssFragment()
+    private val addTaskFragment = com.example.tasktimerapp.fragments.AddTaskFragment()
     lateinit var bottomNav : BottomNavigationView
 //ghassan
     private val taskViewModel by lazy { TaskViewModel(application) }
@@ -28,16 +25,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        replaceFragment(HomeScreenFragment)
+        replaceFragment(homeScreenFragment)
 
 
 
         bottomNav = findViewById(R.id.bottom_navigation)
         bottomNav.setOnNavigationItemSelectedListener { item ->
             when(item.itemId){
-                R.id.ic_home -> {replaceFragment(HomeScreenFragment)}
-                R.id.ic_progress -> {replaceFragment(PrograssFragment)}
-                R.id.ic_add -> {replaceFragment(AddTaskFragment)}
+                R.id.ic_home -> {replaceFragment(homeScreenFragment)}
+                R.id.ic_progress -> {replaceFragment(progressFragment)}
+                R.id.ic_add -> {replaceFragment(addTaskFragment)}
             }
             true
         } //setOnNavigationItemSelectedListener
@@ -62,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     //test
-    fun timer(){
+    private fun timer(){
         var time = 50000L
         val timer = object: CountDownTimer(time, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -71,11 +68,11 @@ class MainActivity : AppCompatActivity() {
                 println("-----------percentage   $percentage")
                 time -= 1000
                 println("-----------$time")
-                binding.timeProgress.progress = percentage.toInt()
+                //binding.timeProgress.progress = percentage.toInt()
             }
 
             override fun onFinish() {
-                binding.timeProgress.progress = 0
+              //  binding.timeProgress.progress = 0
             }
         }
         timer.start()
