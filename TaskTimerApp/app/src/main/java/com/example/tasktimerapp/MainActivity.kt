@@ -15,6 +15,10 @@ import com.example.tasktimerapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private val HomeScreenFragment = com.example.tasktimer.fragments.HomeScreenFragment()
+    private val PrograssFragment = com.example.tasktimer.fragments.PrograssFragment()
+    private val AddTaskFragment = com.example.tasktimer.fragments.AddTaskFragment()
+    lateinit var bottomNav : BottomNavigationView
 
     private val taskViewModel by lazy { TaskViewModel(application) }
     private lateinit var sharedPreferences: SharedPreferences
@@ -22,6 +26,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_main)
+        replaceFragment(HomeScreenFragment)
+
+
+
+        bottomNav = findViewById(R.id.bottom_navigation)
+        bottomNav.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.ic_home -> {replaceFragment(HomeScreenFragment)}
+                R.id.ic_progress -> {replaceFragment(PrograssFragment)}
+                R.id.ic_add -> {replaceFragment(AddTaskFragment)}
+            }
+            true
+        } //setOnNavigationItemSelectedListener
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -32,6 +52,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
+    private fun replaceFragment (fragment : Fragment){
+        if (fragment != null){
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container_view_tag, fragment)
+            transaction.commit()
+        }
+    }
     //test
     fun timer(){
         var time = 50000L
