@@ -4,6 +4,10 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_add.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_btn.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\btn.xml"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -28,6 +32,10 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_home_screen.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_item_row.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\item_row.xml"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -38,6 +46,10 @@
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_group.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\group.xml"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -56,8 +68,16 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_task_bg.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\add_task_bg.xml"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_transparent_btn_bg.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\transparent_btn_bg.xml"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_prograss.xml.flat",
@@ -66,6 +86,14 @@
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_rvrow.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\rvrow.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_stop.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_stop.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_refresh.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_refresh.xml"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -88,6 +116,14 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_instruction.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_instruction.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_row_shape.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\row_shape.xml"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -102,5 +138,9 @@
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_add.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_add.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\bg.xml"
     }
 ]

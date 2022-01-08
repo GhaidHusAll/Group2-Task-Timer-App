@@ -7,6 +7,7 @@ import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -33,12 +34,14 @@ public final class TaskDao_Impl implements TaskDao {
 
   private final EntityDeletionOrUpdateAdapter<Task> __updateAdapterOfTask;
 
+  private final SharedSQLiteStatement __preparedStmtOfDeactivateAllTasks;
+
   public TaskDao_Impl(RoomDatabase __db) {
     this.__db = __db;
     this.__insertionAdapterOfTask = new EntityInsertionAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `Task` (`pk`,`task`,`description`,`time`,`isDone`) VALUES (nullif(?, 0),?,?,?,?)";
+        return "INSERT OR IGNORE INTO `Task` (`pk`,`task`,`description`,`timer`,`totalTime`,`active`,`isClicked`,`pauseOffset`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -54,9 +57,21 @@ public final class TaskDao_Impl implements TaskDao {
         } else {
           stmt.bindString(3, value.getDescription());
         }
-        stmt.bindLong(4, value.getTime());
-        final int _tmp = value.isDone() ? 1 : 0;
-        stmt.bindLong(5, _tmp);
+        if (value.getTimer() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getTimer());
+        }
+        if (value.getTotalTime() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getTotalTime());
+        }
+        final int _tmp = value.getActive() ? 1 : 0;
+        stmt.bindLong(6, _tmp);
+        final int _tmp_1 = value.isClicked() ? 1 : 0;
+        stmt.bindLong(7, _tmp_1);
+        stmt.bindLong(8, value.getPauseOffset());
       }
     };
     this.__deletionAdapterOfTask = new EntityDeletionOrUpdateAdapter<Task>(__db) {
@@ -73,7 +88,7 @@ public final class TaskDao_Impl implements TaskDao {
     this.__updateAdapterOfTask = new EntityDeletionOrUpdateAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Task` SET `pk` = ?,`task` = ?,`description` = ?,`time` = ?,`isDone` = ? WHERE `pk` = ?";
+        return "UPDATE OR ABORT `Task` SET `pk` = ?,`task` = ?,`description` = ?,`timer` = ?,`totalTime` = ?,`active` = ?,`isClicked` = ?,`pauseOffset` = ? WHERE `pk` = ?";
       }
 
       @Override
@@ -89,10 +104,29 @@ public final class TaskDao_Impl implements TaskDao {
         } else {
           stmt.bindString(3, value.getDescription());
         }
-        stmt.bindLong(4, value.getTime());
-        final int _tmp = value.isDone() ? 1 : 0;
-        stmt.bindLong(5, _tmp);
-        stmt.bindLong(6, value.getPk());
+        if (value.getTimer() == null) {
+          stmt.bindNull(4);
+        } else {
+          stmt.bindString(4, value.getTimer());
+        }
+        if (value.getTotalTime() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getTotalTime());
+        }
+        final int _tmp = value.getActive() ? 1 : 0;
+        stmt.bindLong(6, _tmp);
+        final int _tmp_1 = value.isClicked() ? 1 : 0;
+        stmt.bindLong(7, _tmp_1);
+        stmt.bindLong(8, value.getPauseOffset());
+        stmt.bindLong(9, value.getPk());
+      }
+    };
+    this.__preparedStmtOfDeactivateAllTasks = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "UPDATE task SET active = ? WHERE active = ?";
+        return _query;
       }
     };
   }
@@ -149,6 +183,26 @@ public final class TaskDao_Impl implements TaskDao {
   }
 
   @Override
+  public void deactivateAllTasks(final boolean inactive, final boolean active) {
+    __db.assertNotSuspendingTransaction();
+    final SupportSQLiteStatement _stmt = __preparedStmtOfDeactivateAllTasks.acquire();
+    int _argIndex = 1;
+    final int _tmp = inactive ? 1 : 0;
+    _stmt.bindLong(_argIndex, _tmp);
+    _argIndex = 2;
+    final int _tmp_1 = active ? 1 : 0;
+    _stmt.bindLong(_argIndex, _tmp_1);
+    __db.beginTransaction();
+    try {
+      _stmt.executeUpdateDelete();
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+      __preparedStmtOfDeactivateAllTasks.release(_stmt);
+    }
+  }
+
+  @Override
   public LiveData<List<Task>> getTasks() {
     final String _sql = "select * from task";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
@@ -160,8 +214,11 @@ public final class TaskDao_Impl implements TaskDao {
           final int _cursorIndexOfPk = CursorUtil.getColumnIndexOrThrow(_cursor, "pk");
           final int _cursorIndexOfTask = CursorUtil.getColumnIndexOrThrow(_cursor, "task");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
-          final int _cursorIndexOfTime = CursorUtil.getColumnIndexOrThrow(_cursor, "time");
-          final int _cursorIndexOfIsDone = CursorUtil.getColumnIndexOrThrow(_cursor, "isDone");
+          final int _cursorIndexOfTimer = CursorUtil.getColumnIndexOrThrow(_cursor, "timer");
+          final int _cursorIndexOfTotalTime = CursorUtil.getColumnIndexOrThrow(_cursor, "totalTime");
+          final int _cursorIndexOfActive = CursorUtil.getColumnIndexOrThrow(_cursor, "active");
+          final int _cursorIndexOfIsClicked = CursorUtil.getColumnIndexOrThrow(_cursor, "isClicked");
+          final int _cursorIndexOfPauseOffset = CursorUtil.getColumnIndexOrThrow(_cursor, "pauseOffset");
           final List<Task> _result = new ArrayList<Task>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Task _item;
@@ -179,13 +236,29 @@ public final class TaskDao_Impl implements TaskDao {
             } else {
               _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
             }
-            final long _tmpTime;
-            _tmpTime = _cursor.getLong(_cursorIndexOfTime);
-            final boolean _tmpIsDone;
+            final String _tmpTimer;
+            if (_cursor.isNull(_cursorIndexOfTimer)) {
+              _tmpTimer = null;
+            } else {
+              _tmpTimer = _cursor.getString(_cursorIndexOfTimer);
+            }
+            final String _tmpTotalTime;
+            if (_cursor.isNull(_cursorIndexOfTotalTime)) {
+              _tmpTotalTime = null;
+            } else {
+              _tmpTotalTime = _cursor.getString(_cursorIndexOfTotalTime);
+            }
+            final boolean _tmpActive;
             final int _tmp;
-            _tmp = _cursor.getInt(_cursorIndexOfIsDone);
-            _tmpIsDone = _tmp != 0;
-            _item = new Task(_tmpPk,_tmpTask,_tmpDescription,_tmpTime,_tmpIsDone);
+            _tmp = _cursor.getInt(_cursorIndexOfActive);
+            _tmpActive = _tmp != 0;
+            final boolean _tmpIsClicked;
+            final int _tmp_1;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfIsClicked);
+            _tmpIsClicked = _tmp_1 != 0;
+            final long _tmpPauseOffset;
+            _tmpPauseOffset = _cursor.getLong(_cursorIndexOfPauseOffset);
+            _item = new Task(_tmpPk,_tmpTask,_tmpDescription,_tmpTimer,_tmpTotalTime,_tmpActive,_tmpIsClicked,_tmpPauseOffset);
             _result.add(_item);
           }
           return _result;
@@ -199,6 +272,73 @@ public final class TaskDao_Impl implements TaskDao {
         _statement.release();
       }
     });
+  }
+
+  @Override
+  public Task getTaskByActive(final boolean active) {
+    final String _sql = "SELECT * FROM task WHERE active = ? LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    final int _tmp = active ? 1 : 0;
+    _statement.bindLong(_argIndex, _tmp);
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _cursorIndexOfPk = CursorUtil.getColumnIndexOrThrow(_cursor, "pk");
+      final int _cursorIndexOfTask = CursorUtil.getColumnIndexOrThrow(_cursor, "task");
+      final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
+      final int _cursorIndexOfTimer = CursorUtil.getColumnIndexOrThrow(_cursor, "timer");
+      final int _cursorIndexOfTotalTime = CursorUtil.getColumnIndexOrThrow(_cursor, "totalTime");
+      final int _cursorIndexOfActive = CursorUtil.getColumnIndexOrThrow(_cursor, "active");
+      final int _cursorIndexOfIsClicked = CursorUtil.getColumnIndexOrThrow(_cursor, "isClicked");
+      final int _cursorIndexOfPauseOffset = CursorUtil.getColumnIndexOrThrow(_cursor, "pauseOffset");
+      final Task _result;
+      if(_cursor.moveToFirst()) {
+        final int _tmpPk;
+        _tmpPk = _cursor.getInt(_cursorIndexOfPk);
+        final String _tmpTask;
+        if (_cursor.isNull(_cursorIndexOfTask)) {
+          _tmpTask = null;
+        } else {
+          _tmpTask = _cursor.getString(_cursorIndexOfTask);
+        }
+        final String _tmpDescription;
+        if (_cursor.isNull(_cursorIndexOfDescription)) {
+          _tmpDescription = null;
+        } else {
+          _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
+        }
+        final String _tmpTimer;
+        if (_cursor.isNull(_cursorIndexOfTimer)) {
+          _tmpTimer = null;
+        } else {
+          _tmpTimer = _cursor.getString(_cursorIndexOfTimer);
+        }
+        final String _tmpTotalTime;
+        if (_cursor.isNull(_cursorIndexOfTotalTime)) {
+          _tmpTotalTime = null;
+        } else {
+          _tmpTotalTime = _cursor.getString(_cursorIndexOfTotalTime);
+        }
+        final boolean _tmpActive;
+        final int _tmp_1;
+        _tmp_1 = _cursor.getInt(_cursorIndexOfActive);
+        _tmpActive = _tmp_1 != 0;
+        final boolean _tmpIsClicked;
+        final int _tmp_2;
+        _tmp_2 = _cursor.getInt(_cursorIndexOfIsClicked);
+        _tmpIsClicked = _tmp_2 != 0;
+        final long _tmpPauseOffset;
+        _tmpPauseOffset = _cursor.getLong(_cursorIndexOfPauseOffset);
+        _result = new Task(_tmpPk,_tmpTask,_tmpDescription,_tmpTimer,_tmpTotalTime,_tmpActive,_tmpIsClicked,_tmpPauseOffset);
+      } else {
+        _result = null;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
+    }
   }
 
   public static List<Class<?>> getRequiredConverters() {

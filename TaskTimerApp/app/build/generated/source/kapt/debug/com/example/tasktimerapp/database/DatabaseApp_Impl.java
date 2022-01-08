@@ -34,12 +34,12 @@ public final class DatabaseApp_Impl extends DatabaseApp {
 
   @Override
   protected SupportSQLiteOpenHelper createOpenHelper(DatabaseConfiguration configuration) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(2) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(3) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Task` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `task` TEXT NOT NULL, `description` TEXT NOT NULL, `time` INTEGER NOT NULL, `isDone` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Task` (`pk` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `task` TEXT NOT NULL, `description` TEXT NOT NULL, `timer` TEXT NOT NULL, `totalTime` TEXT NOT NULL, `active` INTEGER NOT NULL, `isClicked` INTEGER NOT NULL, `pauseOffset` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd6da978557aebb4ee824d0e4a5eab61b')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fbe6c8199dfc53b93a6b497798fbdb54')");
       }
 
       @Override
@@ -83,12 +83,15 @@ public final class DatabaseApp_Impl extends DatabaseApp {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsTask = new HashMap<String, TableInfo.Column>(5);
+        final HashMap<String, TableInfo.Column> _columnsTask = new HashMap<String, TableInfo.Column>(8);
         _columnsTask.put("pk", new TableInfo.Column("pk", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("task", new TableInfo.Column("task", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("description", new TableInfo.Column("description", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsTask.put("time", new TableInfo.Column("time", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsTask.put("isDone", new TableInfo.Column("isDone", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("timer", new TableInfo.Column("timer", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("totalTime", new TableInfo.Column("totalTime", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("active", new TableInfo.Column("active", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("isClicked", new TableInfo.Column("isClicked", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("pauseOffset", new TableInfo.Column("pauseOffset", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysTask = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesTask = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoTask = new TableInfo("Task", _columnsTask, _foreignKeysTask, _indicesTask);
@@ -100,7 +103,7 @@ public final class DatabaseApp_Impl extends DatabaseApp {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "d6da978557aebb4ee824d0e4a5eab61b", "17d46ca2566f730755c8ee738614ec39");
+    }, "fbe6c8199dfc53b93a6b497798fbdb54", "54a9c95a091bb5754470d75cc02a10de");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

@@ -16,6 +16,7 @@ import com.example.tasktimerapp.R
 import com.example.tasktimerapp.Resource.HomeRecyclerView
 import com.example.tasktimerapp.ViewModel.TaskViewModel
 import com.example.tasktimerapp.database.Task
+import me.zhanghai.android.materialprogressbar.MaterialProgressBar
 
 class HomeScreenFragment : Fragment() {
 
@@ -24,6 +25,7 @@ class HomeScreenFragment : Fragment() {
     lateinit var adapter: HomeRecyclerView
     lateinit var mainTitle: TextView
     lateinit var mainTimer: Chronometer
+    lateinit var timeProgress: MaterialProgressBar
     lateinit var mainDescription: TextView
     private var tasks = listOf<Task>()
     private val taskViewModel by lazy { TaskViewModel(requireActivity().application) }

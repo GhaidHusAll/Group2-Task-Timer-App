@@ -4,11 +4,8 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.tasktimerapp.Resource.TaskAdapter
 import com.example.tasktimerapp.ViewModel.TaskViewModel
 import com.example.tasktimerapp.database.Task
@@ -22,13 +19,11 @@ class MainActivity : AppCompatActivity() {
     private val homeScreenFragment = HomeScreenFragment()
     private val progressFragment = ProgressFragment()
     private val addTaskFragment = AddTaskFragment()
+    private val instructionFragment = InstructionFragment()
+
     lateinit var bottomNav : BottomNavigationView
 
-    private lateinit var myList : MutableList<Task>
-    private lateinit var myAdapter: TaskAdapter
-    private val vm by lazy { ViewModelProvider(this)[TaskViewModel::class.java] }
-//ghassan
-    private val taskViewModel by lazy { TaskViewModel(application) }
+
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var binding: ActivityMainBinding
 
@@ -46,6 +41,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_home -> {replaceFragment(homeScreenFragment)}
                 R.id.ic_progress -> {replaceFragment(progressFragment)}
                 R.id.ic_add -> {replaceFragment(addTaskFragment)}
+                R.id.ic_info -> {replaceFragment(instructionFragment)}
+
             }
             true
         } //setOnNavigationItemSelectedListener
@@ -85,19 +82,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-     fun setRecyclerView(view: View){
-        val rv = view.findViewById<RecyclerView>(R.id.mainRecyclerView)
-        myList = mutableListOf()
-        myAdapter = TaskAdapter(myList,this)
-        rv.adapter = myAdapter
-        rv.layoutManager = LinearLayoutManager(this)
-        rv.setHasFixedSize(true)
-        vm.getAllTasks().observe(this,{
-                Tasks ->
-            myList = Tasks as MutableList<Task>
-            myAdapter.updateRecyclerView(myList)
-        })
 
-    }
 
 }

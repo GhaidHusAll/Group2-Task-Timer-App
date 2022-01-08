@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gold"
+    android:orientation="vertical"
+    tools:context=".fragments.InstructionFragment">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/bg"
+        android:padding="40dp"
+        android:textStyle="bold"
+        android:text="About our app:"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/tvInst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/bg"
+        android:textStyle="italic"
+        android:padding="40dp"
+        android:text="@string/instruction"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>

@@ -8,15 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
     ----
     <color name="icons">#168DEC</color>
     <color name="light_gray">#F4F4F4</color>
 
     //Yellow...
-    <color name="Gold">#FFD700</color>
     <color name="Yellow">#FFFF00</color>
     <color name="LightYellow">#FFFFE0</color>
     <color name="Khaki">#F0E68C</color>
     <color name="DarkKhaki">#BDB76B</color>
+    <color name="Gold">#FFD700</color>
+
 
 </resources>

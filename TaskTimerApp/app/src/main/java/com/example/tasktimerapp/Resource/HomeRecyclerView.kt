@@ -37,6 +37,8 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
         val task = tasks[position]
 
         holder.binding.apply {
+            tvTitleInHome.text = task.task
+            chronometer.text = task.timer
 
             if (task.active && task.isClicked) {
                 viewFragment.mainTitle.text = task.task
@@ -49,6 +51,7 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
                 task.isClicked = false
                 taskViewModel.updateTask(task)
             } else if (task.active && !task.isClicked) {
+
                 mainTimer.onChronometerTickListener =
                     Chronometer.OnChronometerTickListener { mainChronometer ->
                     }
@@ -64,7 +67,9 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
                             stopTimer(activeTask, mainTimer)
                         }
                     }
+
                     viewFragment.mainTitle.text = task.task
+
                     task.active = true
                     task.isClicked = true
                     taskViewModel.updateTask(task)

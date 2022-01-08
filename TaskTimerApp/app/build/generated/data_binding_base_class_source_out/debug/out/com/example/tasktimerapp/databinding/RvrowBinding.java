@@ -4,46 +4,56 @@ package com.example.tasktimerapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.tasktimerapp.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
-import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
 
 public final class RvrowBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
 
   @NonNull
-  public final LinearLayout taskRow;
+  public final AppCompatButton btnDelete;
 
   @NonNull
-  public final MaterialProgressBar timeProgress;
+  public final AppCompatButton btnUpdate;
 
   @NonNull
-  public final TextView tvDes;
+  public final ImageView ivTotalMore;
 
   @NonNull
-  public final TextView tvTimer;
+  public final LinearLayout llDescriptionHolder;
 
   @NonNull
-  public final TextView tvTitle;
+  public final TextView tvTotalTime;
 
-  private RvrowBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout taskRow,
-      @NonNull MaterialProgressBar timeProgress, @NonNull TextView tvDes, @NonNull TextView tvTimer,
-      @NonNull TextView tvTitle) {
+  @NonNull
+  public final TextView tvTotalTitle;
+
+  @NonNull
+  public final TextView tvTotatlDescription;
+
+  private RvrowBinding(@NonNull LinearLayout rootView, @NonNull AppCompatButton btnDelete,
+      @NonNull AppCompatButton btnUpdate, @NonNull ImageView ivTotalMore,
+      @NonNull LinearLayout llDescriptionHolder, @NonNull TextView tvTotalTime,
+      @NonNull TextView tvTotalTitle, @NonNull TextView tvTotatlDescription) {
     this.rootView = rootView;
-    this.taskRow = taskRow;
-    this.timeProgress = timeProgress;
-    this.tvDes = tvDes;
-    this.tvTimer = tvTimer;
-    this.tvTitle = tvTitle;
+    this.btnDelete = btnDelete;
+    this.btnUpdate = btnUpdate;
+    this.ivTotalMore = ivTotalMore;
+    this.llDescriptionHolder = llDescriptionHolder;
+    this.tvTotalTime = tvTotalTime;
+    this.tvTotalTitle = tvTotalTitle;
+    this.tvTotatlDescription = tvTotatlDescription;
   }
 
   @Override
@@ -73,38 +83,50 @@ public final class RvrowBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.taskRow;
-      LinearLayout taskRow = ViewBindings.findChildViewById(rootView, id);
-      if (taskRow == null) {
+      id = R.id.btnDelete;
+      AppCompatButton btnDelete = ViewBindings.findChildViewById(rootView, id);
+      if (btnDelete == null) {
         break missingId;
       }
 
-      id = R.id.timeProgress;
-      MaterialProgressBar timeProgress = ViewBindings.findChildViewById(rootView, id);
-      if (timeProgress == null) {
+      id = R.id.btnUpdate;
+      AppCompatButton btnUpdate = ViewBindings.findChildViewById(rootView, id);
+      if (btnUpdate == null) {
         break missingId;
       }
 
-      id = R.id.tvDes;
-      TextView tvDes = ViewBindings.findChildViewById(rootView, id);
-      if (tvDes == null) {
+      id = R.id.ivTotalMore;
+      ImageView ivTotalMore = ViewBindings.findChildViewById(rootView, id);
+      if (ivTotalMore == null) {
         break missingId;
       }
 
-      id = R.id.tvTimer;
-      TextView tvTimer = ViewBindings.findChildViewById(rootView, id);
-      if (tvTimer == null) {
+      id = R.id.llDescriptionHolder;
+      LinearLayout llDescriptionHolder = ViewBindings.findChildViewById(rootView, id);
+      if (llDescriptionHolder == null) {
         break missingId;
       }
 
-      id = R.id.tvTitle;
-      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvTitle == null) {
+      id = R.id.tvTotalTime;
+      TextView tvTotalTime = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotalTime == null) {
         break missingId;
       }
 
-      return new RvrowBinding((LinearLayout) rootView, taskRow, timeProgress, tvDes, tvTimer,
-          tvTitle);
+      id = R.id.tvTotalTitle;
+      TextView tvTotalTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotalTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTotatlDescription;
+      TextView tvTotatlDescription = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotatlDescription == null) {
+        break missingId;
+      }
+
+      return new RvrowBinding((LinearLayout) rootView, btnDelete, btnUpdate, ivTotalMore,
+          llDescriptionHolder, tvTotalTime, tvTotalTitle, tvTotatlDescription);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,8 +4,16 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_prograss.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_row.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\item_row.xml"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\rvrow.xml",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\rvrow.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_instruction.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_instruction.xml"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add.xml",

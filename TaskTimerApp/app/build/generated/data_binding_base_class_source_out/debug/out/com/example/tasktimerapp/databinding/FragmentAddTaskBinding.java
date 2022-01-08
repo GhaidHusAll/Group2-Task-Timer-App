@@ -31,14 +31,19 @@ public final class FragmentAddTaskBinding implements ViewBinding {
   public final EditText etTask;
 
   @NonNull
+  public final TextView tv;
+
+  @NonNull
   public final TextView tvTitle;
 
   private FragmentAddTaskBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAdd,
-      @NonNull EditText etDescription, @NonNull EditText etTask, @NonNull TextView tvTitle) {
+      @NonNull EditText etDescription, @NonNull EditText etTask, @NonNull TextView tv,
+      @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnAdd = btnAdd;
     this.etDescription = etDescription;
     this.etTask = etTask;
+    this.tv = tv;
     this.tvTitle = tvTitle;
   }
 
@@ -87,6 +92,12 @@ public final class FragmentAddTaskBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv;
+      TextView tv = ViewBindings.findChildViewById(rootView, id);
+      if (tv == null) {
+        break missingId;
+      }
+
       id = R.id.tv_title;
       TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
       if (tvTitle == null) {
@@ -94,7 +105,7 @@ public final class FragmentAddTaskBinding implements ViewBinding {
       }
 
       return new FragmentAddTaskBinding((ConstraintLayout) rootView, btnAdd, etDescription, etTask,
-          tvTitle);
+          tv, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

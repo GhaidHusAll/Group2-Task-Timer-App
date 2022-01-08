@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".fragments.ProgressFragment">
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:text="Progress"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:textSize="40sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMain"
