@@ -4,7 +4,6 @@ package com.example.tasktimerapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -22,16 +21,7 @@ public final class RvrowBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button button;
-
-  @NonNull
-  public final Button button2;
-
-  @NonNull
   public final LinearLayout taskRow;
-
-  @NonNull
-  public final TextView textView;
 
   @NonNull
   public final MaterialProgressBar timeProgress;
@@ -45,15 +35,11 @@ public final class RvrowBinding implements ViewBinding {
   @NonNull
   public final TextView tvTitle;
 
-  private RvrowBinding(@NonNull LinearLayout rootView, @NonNull Button button,
-      @NonNull Button button2, @NonNull LinearLayout taskRow, @NonNull TextView textView,
+  private RvrowBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout taskRow,
       @NonNull MaterialProgressBar timeProgress, @NonNull TextView tvDes, @NonNull TextView tvTimer,
       @NonNull TextView tvTitle) {
     this.rootView = rootView;
-    this.button = button;
-    this.button2 = button2;
     this.taskRow = taskRow;
-    this.textView = textView;
     this.timeProgress = timeProgress;
     this.tvDes = tvDes;
     this.tvTimer = tvTimer;
@@ -87,27 +73,9 @@ public final class RvrowBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
-        break missingId;
-      }
-
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
-        break missingId;
-      }
-
       id = R.id.taskRow;
       LinearLayout taskRow = ViewBindings.findChildViewById(rootView, id);
       if (taskRow == null) {
-        break missingId;
-      }
-
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
         break missingId;
       }
 
@@ -135,8 +103,8 @@ public final class RvrowBinding implements ViewBinding {
         break missingId;
       }
 
-      return new RvrowBinding((LinearLayout) rootView, button, button2, taskRow, textView,
-          timeProgress, tvDes, tvTimer, tvTitle);
+      return new RvrowBinding((LinearLayout) rootView, taskRow, timeProgress, tvDes, tvTimer,
+          tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

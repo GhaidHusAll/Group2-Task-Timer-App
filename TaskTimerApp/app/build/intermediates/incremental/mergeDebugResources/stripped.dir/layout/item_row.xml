@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMainHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/row_shape"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTitleInHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Workout"
+            android:textSize="20dp" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOptionsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/transparent_btn_bg"
+            android:drawableLeft="@drawable/ic_stop"
+            android:drawablePadding="0dp"
+            android:drawableTint="@color/Gold"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Stop"
+            android:textAllCaps="false"
+            android:textColor="@color/Gold"
+            android:textSize="12sp" />
+
+        <android.widget.Button
+            android:id="@+id/btnRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/transparent_btn_bg"
+            android:drawableLeft="@drawable/ic_refresh"
+            android:drawablePadding="0dp"
+            android:drawableTint="@color/Gold"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Restart"
+            android:textAllCaps="false"
+            android:textColor="@color/Gold"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
