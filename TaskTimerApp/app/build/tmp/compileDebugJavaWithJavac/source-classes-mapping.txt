@@ -1,0 +1,28 @@
+com/example/tasktimerapp/database/DatabaseApp_Impl.java
+ com.example.tasktimerapp.database.DatabaseApp_Impl
+ com.example.tasktimerapp.database.DatabaseApp_Impl$1
+com/example/tasktimerapp/databinding/ActivityAddBinding.java
+ com.example.tasktimerapp.databinding.ActivityAddBinding
+com/example/tasktimerapp/databinding/FragmentPrograssBinding.java
+ com.example.tasktimerapp.databinding.FragmentPrograssBinding
+com/example/tasktimerapp/databinding/ActivityMainBinding.java
+ com.example.tasktimerapp.databinding.ActivityMainBinding
+com/example/tasktimerapp/database/TaskDao_Impl.java
+ com.example.tasktimerapp.database.TaskDao_Impl
+ com.example.tasktimerapp.database.TaskDao_Impl$1
+ com.example.tasktimerapp.database.TaskDao_Impl$2
+ com.example.tasktimerapp.database.TaskDao_Impl$3
+ com.example.tasktimerapp.database.TaskDao_Impl$4
+ com.example.tasktimerapp.database.TaskDao_Impl$5
+ com.example.tasktimerapp.database.TaskDao_Impl$6
+ com.example.tasktimerapp.database.TaskDao_Impl$7
+com/example/tasktimerapp/databinding/FragmentHomeScreenBinding.java
+ com.example.tasktimerapp.databinding.FragmentHomeScreenBinding
+com/example/tasktimerapp/databinding/ActivityPrograssBinding.java
+ com.example.tasktimerapp.databinding.ActivityPrograssBinding
+com/example/tasktimerapp/BuildConfig.java
+ com.example.tasktimerapp.BuildConfig
+com/example/tasktimerapp/databinding/FragmentAddTaskBinding.java
+ com.example.tasktimerapp.databinding.FragmentAddTaskBinding
+com/example/tasktimerapp/databinding/RvrowBinding.java
+ com.example.tasktimerapp.databinding.RvrowBinding
