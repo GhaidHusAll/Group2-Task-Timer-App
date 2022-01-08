@@ -44,5 +44,12 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun deactivateAllTasks() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deactivateAllTasks()
+        }
+    }
+
+
 
 }

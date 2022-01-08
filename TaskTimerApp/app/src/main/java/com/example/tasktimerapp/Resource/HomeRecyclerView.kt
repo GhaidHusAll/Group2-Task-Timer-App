@@ -8,7 +8,7 @@ import android.widget.Chronometer
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tasktimerapp.ViewModel.TaskViewModel
-import com.example.tasktimerapp.Model.Task
+import com.example.tasktimerapp.database.Task
 import com.example.tasktimerapp.databinding.ItemRowBinding
 import com.example.tasktimerapp.fragments.HomeScreenFragment
 

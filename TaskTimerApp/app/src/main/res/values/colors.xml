@@ -11,4 +11,11 @@
     ----
     <color name="icons">#168DEC</color>
 
+    //Yellow...
+    <color name="Gold">#FFD700</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="LightYellow">#FFFFE0</color>
+    <color name="Khaki">#F0E68C</color>
+    <color name="DarkKhaki">#BDB76B</color>
+
 </resources>

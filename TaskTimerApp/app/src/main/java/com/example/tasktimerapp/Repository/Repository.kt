@@ -22,4 +22,8 @@ class Repository(private val taskDao: TaskDao) {
     }
 
 
+    fun deactivateAllTasks() {
+        taskDao.deactivateAllTasks()
+    }
+
 }

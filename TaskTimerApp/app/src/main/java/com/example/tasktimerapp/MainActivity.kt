@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tasktimerapp.Resource.TaskAdapter
 import com.example.tasktimerapp.ViewModel.TaskViewModel
 import com.example.tasktimerapp.database.Task
 import com.example.tasktimerapp.databinding.ActivityMainBinding
