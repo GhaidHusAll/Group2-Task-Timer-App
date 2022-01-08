@@ -1,60 +1,46 @@
-package com.example.tasktimer.fragments
+package com.example.tasktimerapp.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tasktimer.R
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import com.example.tasktimerapp.R
+import com.example.tasktimerapp.ViewModel.TaskViewModel
+import com.example.tasktimerapp.database.Task
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AddTaskFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AddTaskFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val vm by lazy { ViewModelProvider(this)[TaskViewModel::class.java] }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_task, container, false)
+        val view = inflater.inflate(R.layout.fragment_add_task, container, false)
+        val btn = view.findViewById<Button>(R.id.btnAdd)
+        val taskText = view.findViewById<EditText>(R.id.etTask)
+        val descriptionText = view.findViewById<EditText>(R.id.etDescription)
+        btn?.setOnClickListener {
+            if (taskText!!.text.isNotEmpty()&&descriptionText!!.text.isNotEmpty()){
+                add(taskText,descriptionText,view)
+            }else {
+                Toast.makeText(view.context,"Please fill all the Fields", Toast.LENGTH_LONG).show()
+            }
+        }
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddTaskFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddTaskFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun add(taskText: EditText,descriptionText: EditText,view: View){
+
+        vm.addTask(Task(0,taskText.text.toString(),descriptionText.text.toString(),60000L,false))
+        Toast.makeText(view.context,"new Task added Successfully",Toast.LENGTH_LONG).show()
+        taskText.text.clear()
+        descriptionText.text.clear()
+
     }
 }

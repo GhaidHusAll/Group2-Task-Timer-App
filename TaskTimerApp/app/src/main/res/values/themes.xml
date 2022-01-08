@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TaskTimer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.TaskTimerApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#168DEC</item>
         <item name="colorPrimaryVariant">#015495</item>
