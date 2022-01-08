@@ -4,6 +4,8 @@ package com.example.tasktimerapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +22,24 @@ public final class FragmentAddTaskBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView addTV;
+  public final Button btnAdd;
 
-  private FragmentAddTaskBinding(@NonNull ConstraintLayout rootView, @NonNull TextView addTV) {
+  @NonNull
+  public final EditText etDescription;
+
+  @NonNull
+  public final EditText etTask;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  private FragmentAddTaskBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAdd,
+      @NonNull EditText etDescription, @NonNull EditText etTask, @NonNull TextView tvTitle) {
     this.rootView = rootView;
-    this.addTV = addTV;
+    this.btnAdd = btnAdd;
+    this.etDescription = etDescription;
+    this.etTask = etTask;
+    this.tvTitle = tvTitle;
   }
 
   @Override
@@ -54,13 +69,32 @@ public final class FragmentAddTaskBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.addTV;
-      TextView addTV = ViewBindings.findChildViewById(rootView, id);
-      if (addTV == null) {
+      id = R.id.btnAdd;
+      Button btnAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnAdd == null) {
         break missingId;
       }
 
-      return new FragmentAddTaskBinding((ConstraintLayout) rootView, addTV);
+      id = R.id.etDescription;
+      EditText etDescription = ViewBindings.findChildViewById(rootView, id);
+      if (etDescription == null) {
+        break missingId;
+      }
+
+      id = R.id.etTask;
+      EditText etTask = ViewBindings.findChildViewById(rootView, id);
+      if (etTask == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_title;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentAddTaskBinding((ConstraintLayout) rootView, btnAdd, etDescription, etTask,
+          tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

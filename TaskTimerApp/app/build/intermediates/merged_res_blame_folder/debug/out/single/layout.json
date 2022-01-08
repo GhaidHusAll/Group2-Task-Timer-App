@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_task.xml",
-        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/fragment_add_task.xml"
+        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add.xml",
+        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/activity_add.xml"
     },
     {
-        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_task.xml",
-        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/activity_add_task.xml"
+        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_task.xml",
+        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/fragment_add_task.xml"
     },
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_prograss.xml",
@@ -22,5 +22,9 @@
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_prograss.xml",
         "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/activity_prograss.xml"
+    },
+    {
+        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/rvrow.xml",
+        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/rvrow.xml"
     }
 ]

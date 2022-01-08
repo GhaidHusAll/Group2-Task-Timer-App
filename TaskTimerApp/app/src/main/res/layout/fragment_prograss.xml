@@ -7,17 +7,7 @@
     tools:context=".fragments.ProgressFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/progressTV"
-        android:background="@color/purple_500"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="PROGRESS SCREEN "
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

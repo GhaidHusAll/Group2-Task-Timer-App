@@ -4,10 +4,10 @@ package com.example.tasktimerapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.tasktimerapp.R;
@@ -20,11 +20,12 @@ public final class FragmentHomeScreenBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView homeTV;
+  public final RecyclerView mainRecyclerView;
 
-  private FragmentHomeScreenBinding(@NonNull ConstraintLayout rootView, @NonNull TextView homeTV) {
+  private FragmentHomeScreenBinding(@NonNull ConstraintLayout rootView,
+      @NonNull RecyclerView mainRecyclerView) {
     this.rootView = rootView;
-    this.homeTV = homeTV;
+    this.mainRecyclerView = mainRecyclerView;
   }
 
   @Override
@@ -54,13 +55,13 @@ public final class FragmentHomeScreenBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.homeTV;
-      TextView homeTV = ViewBindings.findChildViewById(rootView, id);
-      if (homeTV == null) {
+      id = R.id.mainRecyclerView;
+      RecyclerView mainRecyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (mainRecyclerView == null) {
         break missingId;
       }
 
-      return new FragmentHomeScreenBinding((ConstraintLayout) rootView, homeTV);
+      return new FragmentHomeScreenBinding((ConstraintLayout) rootView, mainRecyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

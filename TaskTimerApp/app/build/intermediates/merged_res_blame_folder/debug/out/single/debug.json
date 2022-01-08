@@ -20,16 +20,16 @@
         "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/menu/menu.xml"
     },
     {
-        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/layout_activity_add_task.xml.flat",
-        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/activity_add_task.xml"
-    },
-    {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/layout_fragment_add_task.xml.flat",
         "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/fragment_add_task.xml"
+    },
+    {
+        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/layout_activity_add.xml.flat",
+        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/activity_add.xml"
     },
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -94,6 +94,10 @@
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/layout_rvrow.xml.flat",
+        "source": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/src/main/res/layout/rvrow.xml"
     },
     {
         "merged": "/Users/ghassanalghamdi/AndroidStudioProjects/Group2-Task-Timer-App/TaskTimerApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
