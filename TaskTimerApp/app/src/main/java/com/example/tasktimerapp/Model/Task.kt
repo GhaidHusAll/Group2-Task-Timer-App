@@ -9,6 +9,9 @@ data class Task(
     var pk: Int,
     var task: String,
     var description : String,
-    var time: Long,
-    var isDone: Boolean
+    var timer: String,
+    var totalTime: String,
+    var active: Boolean,
+    var isClicked: Boolean,
+    var pauseOffset: Long
 )
