@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.TaskTimerApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#168DEC</item>
-        <item name="colorPrimaryVariant">#015495</item>
+        <item name="colorPrimary">@color/DarkKhaki</item>
+        <item name="colorPrimaryVariant">@color/Gold</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#1E4868</item>
-        <item name="colorSecondaryVariant">#78BAEF</item>
+        <item name="colorSecondary">@color/Gold</item>
+        <item name="colorSecondaryVariant">@color/LightYellow</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

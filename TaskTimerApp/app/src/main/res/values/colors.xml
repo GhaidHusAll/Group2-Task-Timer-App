@@ -10,6 +10,7 @@
 
     ----
     <color name="icons">#168DEC</color>
+    <color name="light_gray">#F4F4F4</color>
 
     //Yellow...
     <color name="Gold">#FFD700</color>

@@ -13,6 +13,7 @@ import com.example.tasktimerapp.R
 import com.example.tasktimerapp.ViewModel.TaskViewModel
 import com.example.tasktimerapp.database.Task
 
+
 class AddTaskFragment : Fragment() {
     private val vm by lazy { ViewModelProvider(this)[TaskViewModel::class.java] }
 
@@ -37,7 +38,10 @@ class AddTaskFragment : Fragment() {
 
     private fun add(taskText: EditText,descriptionText: EditText,view: View){
 
-        vm.addTask(Task(0,taskText.text.toString(),descriptionText.text.toString(),60000L,false))
+        vm.addTask(Task(0,taskText.text.toString(),descriptionText.text.toString(),"00:00", "00:00:00",
+            active = false,
+            isClicked = false,
+            pauseOffset = 0L))
         Toast.makeText(view.context,"new Task added Successfully",Toast.LENGTH_LONG).show()
         taskText.text.clear()
         descriptionText.text.clear()
