@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_prograss.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_prograss.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\rvrow.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\rvrow.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_add.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_task.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_add_task.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_prograss.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_prograss.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home_screen.xml",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_home_screen.xml"
+    }
+]
