@@ -38,30 +38,25 @@ public final class TaskDao_Impl implements TaskDao {
     this.__insertionAdapterOfTask = new EntityInsertionAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `Task` (`pk`,`userPk`,`task`,`description`,`time`,`isDone`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR IGNORE INTO `Task` (`pk`,`task`,`description`,`time`,`isDone`) VALUES (nullif(?, 0),?,?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Task value) {
         stmt.bindLong(1, value.getPk());
-        if (value.getUserPk() == null) {
+        if (value.getTask() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getUserPk());
-        }
-        if (value.getTask() == null) {
-          stmt.bindNull(3);
-        } else {
-          stmt.bindString(3, value.getTask());
+          stmt.bindString(2, value.getTask());
         }
         if (value.getDescription() == null) {
-          stmt.bindNull(4);
+          stmt.bindNull(3);
         } else {
-          stmt.bindString(4, value.getDescription());
+          stmt.bindString(3, value.getDescription());
         }
-        stmt.bindLong(5, value.getTime());
+        stmt.bindLong(4, value.getTime());
         final int _tmp = value.isDone() ? 1 : 0;
-        stmt.bindLong(6, _tmp);
+        stmt.bindLong(5, _tmp);
       }
     };
     this.__deletionAdapterOfTask = new EntityDeletionOrUpdateAdapter<Task>(__db) {
@@ -78,31 +73,26 @@ public final class TaskDao_Impl implements TaskDao {
     this.__updateAdapterOfTask = new EntityDeletionOrUpdateAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Task` SET `pk` = ?,`userPk` = ?,`task` = ?,`description` = ?,`time` = ?,`isDone` = ? WHERE `pk` = ?";
+        return "UPDATE OR ABORT `Task` SET `pk` = ?,`task` = ?,`description` = ?,`time` = ?,`isDone` = ? WHERE `pk` = ?";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, Task value) {
         stmt.bindLong(1, value.getPk());
-        if (value.getUserPk() == null) {
+        if (value.getTask() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getUserPk());
-        }
-        if (value.getTask() == null) {
-          stmt.bindNull(3);
-        } else {
-          stmt.bindString(3, value.getTask());
+          stmt.bindString(2, value.getTask());
         }
         if (value.getDescription() == null) {
-          stmt.bindNull(4);
+          stmt.bindNull(3);
         } else {
-          stmt.bindString(4, value.getDescription());
+          stmt.bindString(3, value.getDescription());
         }
-        stmt.bindLong(5, value.getTime());
+        stmt.bindLong(4, value.getTime());
         final int _tmp = value.isDone() ? 1 : 0;
-        stmt.bindLong(6, _tmp);
-        stmt.bindLong(7, value.getPk());
+        stmt.bindLong(5, _tmp);
+        stmt.bindLong(6, value.getPk());
       }
     };
   }
@@ -168,7 +158,6 @@ public final class TaskDao_Impl implements TaskDao {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfPk = CursorUtil.getColumnIndexOrThrow(_cursor, "pk");
-          final int _cursorIndexOfUserPk = CursorUtil.getColumnIndexOrThrow(_cursor, "userPk");
           final int _cursorIndexOfTask = CursorUtil.getColumnIndexOrThrow(_cursor, "task");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfTime = CursorUtil.getColumnIndexOrThrow(_cursor, "time");
@@ -178,12 +167,6 @@ public final class TaskDao_Impl implements TaskDao {
             final Task _item;
             final int _tmpPk;
             _tmpPk = _cursor.getInt(_cursorIndexOfPk);
-            final String _tmpUserPk;
-            if (_cursor.isNull(_cursorIndexOfUserPk)) {
-              _tmpUserPk = null;
-            } else {
-              _tmpUserPk = _cursor.getString(_cursorIndexOfUserPk);
-            }
             final String _tmpTask;
             if (_cursor.isNull(_cursorIndexOfTask)) {
               _tmpTask = null;
@@ -202,7 +185,7 @@ public final class TaskDao_Impl implements TaskDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfIsDone);
             _tmpIsDone = _tmp != 0;
-            _item = new Task(_tmpPk,_tmpUserPk,_tmpTask,_tmpDescription,_tmpTime,_tmpIsDone);
+            _item = new Task(_tmpPk,_tmpTask,_tmpDescription,_tmpTime,_tmpIsDone);
             _result.add(_item);
           }
           return _result;
