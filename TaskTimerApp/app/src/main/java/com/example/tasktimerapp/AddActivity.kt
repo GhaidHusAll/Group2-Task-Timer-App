@@ -2,10 +2,17 @@ package com.example.tasktimerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tasktimerapp.fragments.HomeScreenFragment
 
 class AddActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
+
+
     }
+
+
 }
