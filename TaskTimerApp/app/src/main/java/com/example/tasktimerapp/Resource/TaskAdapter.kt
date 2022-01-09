@@ -43,7 +43,7 @@ class TaskAdapter(application: Application, private val context: Context) :
         holder.binding.apply {
 
             tvTotalTitle.text = task.task
-            tvTotalTime.text = task.totalTime
+            tvTotalTime.text = task.timer
             tvTotatlDescription.text = task.description
 
             llDescriptionHolder.isVisible = false
