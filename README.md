@@ -16,5 +16,9 @@ First user Interface Sketch:
 First Database Sketch:
 ![DB2](https://user-images.githubusercontent.com/75536157/148674828-6b7ec6c5-c1c7-40ac-b9a2-f9551ccbe2f8.png)
 
+Short Demo:
+![timerApp](https://user-images.githubusercontent.com/75536157/148675231-e8b93752-629a-4993-8133-93f066658bd9.gif)
+
+
 
 
