@@ -28,7 +28,7 @@ public final class ItemRowBinding implements ViewBinding {
   public final Button btnStop;
 
   @NonNull
-  public final Chronometer chronometer;
+  public final Chronometer chronometerSmall;
 
   @NonNull
   public final LinearLayout llMainHolder;
@@ -40,12 +40,13 @@ public final class ItemRowBinding implements ViewBinding {
   public final TextView tvTitleInHome;
 
   private ItemRowBinding(@NonNull LinearLayout rootView, @NonNull Button btnRestart,
-      @NonNull Button btnStop, @NonNull Chronometer chronometer, @NonNull LinearLayout llMainHolder,
-      @NonNull LinearLayout llOptionsHolder, @NonNull TextView tvTitleInHome) {
+      @NonNull Button btnStop, @NonNull Chronometer chronometerSmall,
+      @NonNull LinearLayout llMainHolder, @NonNull LinearLayout llOptionsHolder,
+      @NonNull TextView tvTitleInHome) {
     this.rootView = rootView;
     this.btnRestart = btnRestart;
     this.btnStop = btnStop;
-    this.chronometer = chronometer;
+    this.chronometerSmall = chronometerSmall;
     this.llMainHolder = llMainHolder;
     this.llOptionsHolder = llOptionsHolder;
     this.tvTitleInHome = tvTitleInHome;
@@ -90,9 +91,9 @@ public final class ItemRowBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.chronometer;
-      Chronometer chronometer = ViewBindings.findChildViewById(rootView, id);
-      if (chronometer == null) {
+      id = R.id.chronometerSmall;
+      Chronometer chronometerSmall = ViewBindings.findChildViewById(rootView, id);
+      if (chronometerSmall == null) {
         break missingId;
       }
 
@@ -110,7 +111,7 @@ public final class ItemRowBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemRowBinding((LinearLayout) rootView, btnRestart, btnStop, chronometer,
+      return new ItemRowBinding((LinearLayout) rootView, btnRestart, btnStop, chronometerSmall,
           llMainHolder, llOptionsHolder, tvTitleInHome);
     }
     String missingId = rootView.getResources().getResourceName(id);

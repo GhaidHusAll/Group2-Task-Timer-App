@@ -38,7 +38,7 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
 
         holder.binding.apply {
             tvTitleInHome.text = task.task
-            chronometer.text = task.timer
+            chronometerSmall.text = task.timer
 
             if (task.active && task.isClicked) {
                 viewFragment.mainTitle.text = task.task

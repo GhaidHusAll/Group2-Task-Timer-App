@@ -1906,6 +1906,7 @@ int drawable notify_panel_notification_icon_bg 0x7f070097
 int drawable row_shape 0x7f070098
 int drawable test_custom_background 0x7f070099
 int drawable test_level_drawable 0x7f07009a
+int drawable timer 0x7f07009e
 int drawable tooltip_frame_dark 0x7f07009b
 int drawable tooltip_frame_light 0x7f07009c
 int drawable transparent_btn_bg 0x7f07009d
@@ -2034,6 +2035,7 @@ int id chip2 0x7f080079
 int id chip3 0x7f08007a
 int id chip_group 0x7f08007b
 int id chronometer 0x7f08007c
+int id chronometerSmall 0x7f080201
 int id circle_center 0x7f08007d
 int id circular 0x7f08007e
 int id clear_text 0x7f08007f

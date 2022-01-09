@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_progress.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_progress.png"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_add.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_add.xml"
     },
@@ -16,12 +20,12 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\fragment_add_task.xml"
     },
     {
-        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_progress.xml.flat",
-        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_progress.xml"
-    },
-    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_progress.xml.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_progress.xml"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",
@@ -76,6 +80,10 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\menu\\menu.xml"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_ic_progress.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_progress.png"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_transparent_btn_bg.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\transparent_btn_bg.xml"
     },
@@ -86,6 +94,10 @@
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_rvrow.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\layout\\rvrow.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_progress.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-mdpi\\ic_progress.png"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_stop.xml.flat",
@@ -106,6 +118,10 @@
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_info.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\ic_info.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_timer.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-v24\\timer.png"
     },
     {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -132,7 +148,15 @@
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_ic_progress.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_progress.png"
+    },
+    {
         "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg.xml.flat",
         "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable\\bg.xml"
+    },
+    {
+        "merged": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ic_progress.png.flat",
+        "source": "D:\\androidCODES\\Group2-Task-Timer-App2\\TaskTimerApp\\app\\src\\main\\res\\drawable-hdpi\\ic_progress.png"
     }
 ]

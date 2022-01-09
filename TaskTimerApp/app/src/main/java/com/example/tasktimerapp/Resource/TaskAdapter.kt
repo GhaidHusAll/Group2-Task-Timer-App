@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tasktimerapp.ViewModel.TaskViewModel
@@ -82,10 +83,14 @@ class TaskAdapter(application: Application, private val context: Context) :
             .setTitle("Update Task")
             .setView(layout)
             .setPositiveButton("Update") { _, _ ->
-                task.task = taskTitle.text.toString()
-                task.description = taskDescription.text.toString()
 
-                taskViewModel.updateTask(task)
+                if (taskTitle.text.isNotEmpty() && taskDescription.text.isNotEmpty()){
+                    task.task = taskTitle.text.toString()
+                    task.description = taskDescription.text.toString()
+                    taskViewModel.updateTask(task)
+                }else {
+                    Toast.makeText(context,"Please fill all the Fields", Toast.LENGTH_LONG).show()
+                }
             }
             .setNegativeButton("Cancel") { dialogFace, _ -> dialogFace.cancel() }
             .create()
