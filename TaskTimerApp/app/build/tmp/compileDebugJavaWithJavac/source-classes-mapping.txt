@@ -5,8 +5,6 @@ com/example/tasktimerapp/databinding/FragmentPrograssBinding.java
  com.example.tasktimerapp.databinding.FragmentPrograssBinding
 com/example/tasktimerapp/databinding/ActivityMainBinding.java
  com.example.tasktimerapp.databinding.ActivityMainBinding
-com/example/tasktimerapp/databinding/ActivityAddBinding.java
- com.example.tasktimerapp.databinding.ActivityAddBinding
 com/example/tasktimerapp/database/TaskDao_Impl.java
  com.example.tasktimerapp.database.TaskDao_Impl
  com.example.tasktimerapp.database.TaskDao_Impl$1
@@ -21,8 +19,6 @@ com/example/tasktimerapp/databinding/FragmentHomeScreenBinding.java
  com.example.tasktimerapp.databinding.FragmentHomeScreenBinding
 com/example/tasktimerapp/databinding/FragmentInstructionBinding.java
  com.example.tasktimerapp.databinding.FragmentInstructionBinding
-com/example/tasktimerapp/databinding/ActivityPrograssBinding.java
- com.example.tasktimerapp.databinding.ActivityPrograssBinding
 com/example/tasktimerapp/BuildConfig.java
  com.example.tasktimerapp.BuildConfig
 com/example/tasktimerapp/databinding/ItemRowBinding.java
