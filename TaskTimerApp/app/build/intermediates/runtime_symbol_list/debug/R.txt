@@ -2170,6 +2170,7 @@ int id llDescriptionHolder 0x7f0800ff
 int id llMainHolder 0x7f080100
 int id llOptionsHolder 0x7f080101
 int id llmainItem 0x7f080102
+int id lltimerSmall 0x7f080202
 int id mainRecyclerView 0x7f080103
 int id masked 0x7f080104
 int id match_constraint 0x7f080105

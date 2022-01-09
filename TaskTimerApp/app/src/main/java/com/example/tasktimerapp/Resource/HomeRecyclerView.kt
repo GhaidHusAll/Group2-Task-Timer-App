@@ -48,6 +48,8 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
 
 
                 llOptionsHolder.isVisible = true
+                lltimerSmall.isVisible = false
+
                 task.isClicked = false
                 taskViewModel.updateTask(task)
             } else if (task.active && !task.isClicked) {
@@ -57,6 +59,8 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
                     }
             } else if (!task.active && !task.isClicked) {
                 llOptionsHolder.isVisible = false
+                lltimerSmall.isVisible = true
+
             }
 
 
@@ -67,7 +71,6 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
                             stopTimer(activeTask, mainTimer)
                         }
                     }
-
                     viewFragment.mainTitle.text = task.task
 
                     task.active = true
@@ -78,9 +81,11 @@ class HomeRecyclerView(application: Application, val viewFragment: HomeScreenFra
 
             btnStop.setOnClickListener {
                 stopTimer(task, mainTimer)
+
             }
             btnRestart.setOnClickListener {
                 restartTimer(task, mainTimer)
+
             }
 
         }

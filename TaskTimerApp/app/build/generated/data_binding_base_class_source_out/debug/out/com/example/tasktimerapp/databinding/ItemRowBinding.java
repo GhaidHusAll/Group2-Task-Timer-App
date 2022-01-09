@@ -37,18 +37,22 @@ public final class ItemRowBinding implements ViewBinding {
   public final LinearLayout llOptionsHolder;
 
   @NonNull
+  public final LinearLayout lltimerSmall;
+
+  @NonNull
   public final TextView tvTitleInHome;
 
   private ItemRowBinding(@NonNull LinearLayout rootView, @NonNull Button btnRestart,
       @NonNull Button btnStop, @NonNull Chronometer chronometerSmall,
       @NonNull LinearLayout llMainHolder, @NonNull LinearLayout llOptionsHolder,
-      @NonNull TextView tvTitleInHome) {
+      @NonNull LinearLayout lltimerSmall, @NonNull TextView tvTitleInHome) {
     this.rootView = rootView;
     this.btnRestart = btnRestart;
     this.btnStop = btnStop;
     this.chronometerSmall = chronometerSmall;
     this.llMainHolder = llMainHolder;
     this.llOptionsHolder = llOptionsHolder;
+    this.lltimerSmall = lltimerSmall;
     this.tvTitleInHome = tvTitleInHome;
   }
 
@@ -105,6 +109,12 @@ public final class ItemRowBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.lltimerSmall;
+      LinearLayout lltimerSmall = ViewBindings.findChildViewById(rootView, id);
+      if (lltimerSmall == null) {
+        break missingId;
+      }
+
       id = R.id.tvTitleInHome;
       TextView tvTitleInHome = ViewBindings.findChildViewById(rootView, id);
       if (tvTitleInHome == null) {
@@ -112,7 +122,7 @@ public final class ItemRowBinding implements ViewBinding {
       }
 
       return new ItemRowBinding((LinearLayout) rootView, btnRestart, btnStop, chronometerSmall,
-          llMainHolder, llOptionsHolder, tvTitleInHome);
+          llMainHolder, llOptionsHolder, lltimerSmall, tvTitleInHome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
